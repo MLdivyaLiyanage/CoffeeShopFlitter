@@ -35,30 +35,31 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 80),
-                InkWell(
-                  splashColor: Colors.black,
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => HomeScreen(),
-                        ));
-                  },
-                  child: Ink(
-                    child: Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 15, horizontal: 50),
-                      decoration: BoxDecoration(
-                        color: Color(0xFFE57734),
-                        borderRadius: BorderRadius.circular(13),
-                      ),
-                      child: Text(
-                        "Get Start",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 19,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1,
+                Material(
+                  color: Color(0xFFE57734),
+                  borderRadius: BorderRadius.circular(13),
+                  child: InkWell(
+                    // splashColor: Colors.black,
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HomeScreen(),
+                          ));
+                    },
+                    child: Ink(
+                      child: Container(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 15, horizontal: 50),
+                        decoration: BoxDecoration(),
+                        child: Text(
+                          "Get Start",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 19,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 1,
+                          ),
                         ),
                       ),
                     ),
